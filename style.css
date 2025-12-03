@@ -1,0 +1,342 @@
+/* ===== Reset básico ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== Fuente y colores globales ===== */
+body {
+    background: #2a9b2c;
+background: linear-gradient(90deg, rgb(186, 252, 6) 0%, rgb(105, 59, 233) 50%, rgb(5, 82, 224) 100%);
+}
+
+/* ===== Header ===== */
+header {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(8px);
+    color: rgb(255, 255, 255);
+    padding: 15px 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+header h1 {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    cursor: pointer;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav ul li:hover {
+    color: #ffd166;
+}
+
+/* ===== Card Perfil ===== */
+.perfil-card {
+    background: rgb(255, 255, 255);
+    border-radius: 15px;
+    padding: 30px;
+    max-width: 500px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.perfil-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+.perfil-card img {
+    border-radius: 50%;
+    border: 4px solid #f0f0f0;
+    margin-bottom: 20px;
+}
+
+.Nombre {
+    color: #1f6feb;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.Titulo {
+    color: #555;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.descripcion {
+    color: #666;
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+}
+.hero h2 {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid #ffd166;
+  width: 0;
+  animation: typing 3s steps(30, end) forwards, blink 0.7s infinite;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+
+.boton-contacto {
+    background: #1f6feb;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.boton-contacto:hover {
+    background: #155ac3;
+    transform: scale(1.05);
+}
+
+/* ===== Galería ===== */
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+.galeria figure {
+    max-width: 250px;
+    text-align: center;
+}
+
+.galeria img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.galeria img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+}
+
+figcaption {
+    font-weight: 600;
+    margin-top: 8px;
+}
+
+/* Fondo general del footer */
+.footer {
+    background: linear-gradient(135deg, #0b0f19 0%, #1c1f2a 100%);
+    color: #eaeaea;
+    font-size: 0.85rem;   /* texto más pequeño */
+    padding: 25px 0;      /* menos espacio */
+}
+
+/* Títulos */
+.footer-title {
+    font-size: 1.1rem;    /* más pequeño */
+    margin-bottom: 10px;
+    color: #ffd166;
+    font-weight: 600;
+}
+
+/* Lista de contacto */
+.footer-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.footer-list li {
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.9rem;
+}
+.footer-list i {
+    color: #1f6feb;
+    font-size: 1rem;
+}
+
+.footer-input {
+  background-color: #2c2c2c; /* fondo oscuro */
+  color: #fff; /* texto blanco visible siempre */
+  border: 1px solid #555;
+}
+
+.footer-input::placeholder {
+  color: #aaa; /* color del placeholder */
+}
+
+.footer-input:focus {
+  background-color: #1e1e1e; /* más oscuro al escribir */
+  outline: none;
+  border-color: #ffc107; /* borde destacado */
+  color: #fff; /* asegura que el texto siempre se vea */
+}
+
+.btn-footer {
+  background: #ffc107;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  color: #000;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn-footer:hover {
+  background: #e0a800;
+}
+
+
+/* Separador */
+.footer-divider {
+    border-color: rgba(255,255,255,0.1);
+    margin: 15px 0;
+}
+
+
+/* ===== Responsive ===== */
+@media (max-width: 800px) {
+ body {
+    
+background: #2A7B9B;
+background: linear-gradient(90deg, rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .perfil-card {
+        padding: 20px;
+    }
+
+    .galeria {
+        gap: 15px;
+    }
+}
+.hero {
+  height: 50vh;
+  position: relative;
+  background: url("img/Fondo.jpg") no-repeat center center/cover;
+  animation: cambio-fondo 12s infinite;
+}
+
+@keyframes cambio-fondo {
+  0%   { background: url("img/Fondo.jpg") no-repeat center center/cover; }
+  33%  { background: url("img/fondo2.jpg") no-repeat center center/cover; }
+  66%  { background: url("img/Fondo3.jpg") no-repeat center center/cover; }
+  100% { background: url("img/fondo4.jpg") no-repeat center center/cover; }
+}
+/* ...existing code... */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5); /* sombra */
+}
+
+.hero .container {
+  position: relative;
+  z-index: 1;
+}
+/* Encapsular el menú en un cuadro */
+nav ul {
+    background: rgba(3, 88, 245, 0.9); /* Fondo blanco semitransparente */
+    padding: 12px 25px;                  /* Espaciado interno */
+    border-radius: 15px;                 /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* Sombra elegante */
+    display: inline-block;               /* Ajusta el cuadro al tamaño de los links */
+}
+
+/* Los items del menú siguen visibles */
+nav ul li {
+    display: inline-block;
+    margin: 0 12px;
+}
+
+/* Links normales */
+nav ul li a {
+    text-decoration: none;
+    color: #333; /* color de texto */
+    font-weight: bold;
+    transition: all 0.10s ease;
+}
+
+/* Hover (cuando pasas el mouse) */
+nav ul li a:hover {
+    color: #007bff;
+}
+.servicio-card {
+    background: rgba(0, 0, 0, 0.7); /* fondo oscurito semitransparente */
+    color: #fff; /* texto blanco */
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.5); /* sombra flotante */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.servicio-card:hover {
+    transform: translateY(-8px); /* efecto flotante */
+    box-shadow: 0 12px 30px rgba(0,0,0,0.6);
+}
+.servicio-img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;   /* Ajusta bien la imagen */
+    border-radius: 50%;  /* Redonda */
+    border: 3px solid #fff; 
+    margin-bottom: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+#galeria img {
+    width: 100%;          /* ocupa todo el ancho del contenedor */
+    height: 250px;        /* altura fija para todas */
+    object-fit: cover;    /* recorta sin deformar */
+    border-radius: 12px;  /* bordes redondeados */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#galeria img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+}
+#habitaciones img {
+    width: 100%;          /* ocupa todo el ancho del contenedor */
+    height: 250px;        /* altura fija para todas */
+    object-fit: cover;    /* recorta sin deformar */
+    border-radius: 12px;  /* bordes redondeados */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#habitaciones img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+}
